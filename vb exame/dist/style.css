@@ -1,0 +1,64 @@
+.blue{
+    color: blue;
+}
+.border {
+    border: 5px solid black;
+}
+body{
+    margin: 0px 0px;
+    padding: 0 0;
+}
+
+
+#maincontainer {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 60% 30%;
+    grid-template-areas: 
+    "header header header"
+    "leftside photos albumlist"
+    "leftside personalalbum albumlist";
+    height: 100vh;
+}
+
+#leftside {
+    grid-area: leftside;
+
+}
+
+#header {
+    padding: 20px;
+    grid-area: header;
+    border: 3px solid black;
+}
+#albumlist {
+    grid-area: albumlist;
+
+    padding-left: 20px;
+}
+#photolist {
+    /* display: flex; */
+    /* padding-top: 20px; */
+    padding: 1%;
+    grid-area: photos;
+
+}
+
+#personal {
+    display: grid;
+    grid-area: personalalbum;
+    grid-template-rows: 10% auto;
+    grid-template-areas: 
+    "input"
+    "album";
+}
+#personalalbum {
+    grid-area: album;
+    padding: 20px;
+    transform: translateY(20px);
+}
+
+#inputalbum {
+    grid-area: input;
+    padding: 20px;
+}

@@ -1,0 +1,21 @@
+
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: "header header header"
+                         "nav spel nav"
+                         "footer footer footer";
+    transform: translateY(50%);
+}
+.container {
+    grid-area: spel;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: "spel spel spel"
+                         "spel spel spel"
+                         "spel spel spel";
+}
+

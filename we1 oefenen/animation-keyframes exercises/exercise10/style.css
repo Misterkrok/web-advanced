@@ -1,0 +1,28 @@
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Lato', sans-serif;
+	background-color: #273c75;
+}
+h1 {
+
+	font-size: 8rem;
+	position: relative;
+	background-image: url("./image.jpg");
+	animation: wallpaper 10s infinite linear;
+	/* make it only on the letter */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+@keyframes wallpaper {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% -70%;
+	}
+}

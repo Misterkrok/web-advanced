@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+Border/textcolor: #E1332D
+    uppercase text (with css)
+    font family: roboto
+        import with google fonts
+    Letterspacing before animation is smaller than normal
+    Letterspacing after animation is larger than normal
+    border becomes thicker as well */
+
+a {
+    text-decoration: none;
+    border: 3px solid #E1332D;
+    font-family: 'roboto';
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    color: #E1332D; 
+}
+a:hover{
+    transform: scaleX(1.5);
+    transition-duration: 1000ms;
+    font-weight: bold;
+    letter-spacing: 10px;
+}

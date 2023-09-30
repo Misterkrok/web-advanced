@@ -1,0 +1,66 @@
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 60% 20% ;
+    /* take all the screen place and be dynamic */
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0 0;
+    background-color: green;
+}
+
+
+#player1{
+    display: grid;
+    /* put player 2 on the top middle */
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: space-around;
+    background-color: white;
+    border: black solid 4px;
+    transform: translate(38%, -5%);
+    width: 250%;
+    height: 200%  ;
+}
+#player2{
+    display: grid;
+    /* put player 2 on the top middle */
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-content: space-around;
+    background-color: white;
+    border: black solid 4px;
+transform: translate(38%, 260%);
+    width: 250%;
+    height: 200%  ;
+}
+/* put the battle field in the middle */
+#battlefieldid{
+    display: grid;
+    justify-content: space-around;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: lightblue;
+transform: translate(170%, 10%);
+    border: black solid 4px;
+}
+#drawpile1{
+transform: translate(100% ,50%);
+}
+button{
+    background-color: violet;
+    border: black solid 4px;
+    width: 100%;
+    height: 50%;
+}
+
+/* put me the name of the player 1 in the middle */
+
+

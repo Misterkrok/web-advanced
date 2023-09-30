@@ -1,0 +1,114 @@
+.blue {
+    color: blue;
+}
+
+.bordered {
+    border: 5px solid black;
+}
+
+body {
+    margin: 0px 0px;
+    padding: 0 0;
+}
+
+
+#maincontainer {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 60% 30%;
+    grid-template-areas:
+        "header header header"
+        "leftside photos albumlist"
+        "leftside personalalbum albumlist";
+    height: 100vh;
+}
+
+#leftside {
+    grid-area: leftside;
+}
+
+#header {
+    padding: 20px;
+    grid-area: header;
+    border: 3px solid black;
+}
+
+/* Op de lijst met titels zet je een
+ * animatie die triggert op hover. De
+ * textkleur wijzigt van zwart naar
+ * blauw en de spacing en size van de
+ * tekst worden iets groter (experimenteer).
+ * Dit over een periode van 1 seconde. */
+@keyframes titlemation {
+    from {
+        color: black;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    to {
+        color: blue;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.blue {
+    animation-name: titlemation;
+    animation-duration: 1s;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+#albumlist {
+    grid-area: albumlist;
+    padding-left: 20px;
+}
+
+
+/*  Wanneer je over de foto's in de lijst
+ *  hovered met de muis, worden ze iets
+ *  groter op het scherm zodat de afbeelding
+ *  duidelijk te zien is.
+ */
+#photolist img:hover {
+    transition-duration: 0.5s;
+    transform: scale(2);
+}
+
+/* Return to normal */
+#photolist img {
+    transition-duration: 0.5s;
+}
+
+/* Not doing this stretches the image vertically? */
+img {
+    align-self: center;
+}
+
+#photolist {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: photos;
+}
+
+#personal {
+    display: grid;
+    grid-area: personalalbum;
+    grid-template-rows: 10% auto;
+    grid-template-areas:
+        "input"
+        "album";
+}
+
+#personalalbum {
+    grid-area: album;
+    padding: 20px;
+    transform: translateY(20px);
+}
+
+#inputalbum {
+    grid-area: input;
+    padding: 20px;
+    
+}

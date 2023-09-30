@@ -1,0 +1,70 @@
+.blue{
+    color: blue;
+}
+
+.border {
+    border: 5px solid black;
+}
+
+body{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 10% 60% 30%;
+    grid-template-areas: 
+    "header header header"
+    "leftside photos albumlist"
+    "leftside personalalbum albumlist";
+    height: 100vh;
+}
+
+#leftside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-area: leftside;
+    border: 3px solid black;
+}
+
+
+#header {
+    grid-area: header;
+    padding-left: 10px;
+    border: 3px solid black;
+}
+
+#albumlist {
+    grid-area: albumlist;
+    border: 3px solid black;
+}
+
+#photolist {
+    padding: 10px;
+    grid-area: photos;
+    border: 3px solid black;
+}
+
+#personal {
+    display: grid;
+    grid-area: personalalbum;
+    grid-template-rows: 10% auto;
+    grid-template-areas: 
+    "input"
+    "album";
+}
+
+#personalalbum {
+    text-align: center;
+    grid-area: album;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#inputalbum {
+    grid-area: input;
+}

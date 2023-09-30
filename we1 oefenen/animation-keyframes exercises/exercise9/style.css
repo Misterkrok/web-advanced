@@ -1,0 +1,24 @@
+
+/* use the background image ./bg.png make the background image move from left to right */
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* use the background image ./bg.png */
+    background-image: url("./bg.png");
+    animation: wallpaper 10s linear infinite;
+}
+
+@keyframes wallpaper {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+
+
